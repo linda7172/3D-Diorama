@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(rgb(199, 223, 231), rgb(187, 208, 228));
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  .sound{
+    scale: 3;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+  .material-symbols-outlined{
+    position: absolute;
+   left: 2px;
+   top: 2px;
+   user-select: none;
+   color: #9E663F;
+  }
+  .button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 2px;
+    top: 2px;
+    border: none;
+    background: none;
+  }
+
+  .face {
+    position: absolute;
+  }
+  
+  .scene, .object, .queen, .king, .rabbit, .hoop{
+    transform-style: preserve-3d;
+    user-select: none;
+  
+  }
+
+  .scene-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    top: 0px;
+    left: 0px;
+  }
+
+  .scene {
+    width: 500px; height: 400px;
+    transform:rotateX(-20deg);  
+    margin-right: 100px;
+    scale: 1.25;
+  }
+  .object { position: absolute; }
+
+/* --------------base------- */
+
+  .base {height: 100%; width: auto; }
+  .base .front    { transform: rotateY( 10deg )   translate3d( -38px, 232px, 200px );}
+  .base .front2   { transform: rotateY( -10deg )  translate3d(  342px, 232px, 146px );}
+  .base .top      { transform: rotateX( 90deg ); }
+  .base .top2     { transform: rotateX( 90deg )   translate3d( 314px, 0px, 0px ); }
+  .base .top3     { transform: rotateX( 90deg )   translate3d( 314px, 0.5px, 0px ); }
+  .base .left     { transform: rotateY( 90deg )   translate3d(.5px, 232px, -231.7px );}
+  .base .right    { transform: rotateY( 90deg )   translate3d( .65px, 232px, 397px ); }
+
+  .base {height: 100%; width: auto; }
+  .base .centerspine  {transform: rotateY( 0deg )   translate3d( 281px, 290.5px, 196px );}
+  .base .leftspine   {transform: rotateZ( 10.5deg ) rotateY(10.5deg) translate3d( -11px, 263px, 225px );}
+  .base .rightspine    { transform:rotateZ( -10.5deg ) rotateY(-10.5deg) translate3d( 322px, 321.5px, 167px );}
+  .base .leftcover {transform:rotatey( 90deg )  translate3d( 2px, 290.5px, -269px);}
+  .base .rightcover { transform: rotatey( 90deg )  translate3d(3px, 291px, 386.5px);}
+  .base .topcover   {transform: rotateX( 90deg ) translate3d( -17px, -1px, -39px  );}
+  .base .innerleft { transform: rotatey( 90deg )  translate3d(  -41px, 300px, 125.25px );}
+  .base .innerright  {transform:rotatey( 90deg ) translate3d( -41px, 300px, 189.15px );}
+
+  
+  .bigbush {height: 0%; width: auto; transform:translate3d(-29px, -234px, -231px); }
+#bigrosebush{scale: 1.12;}
+
+  
+  .smallbush {height: 0%; width: auto; }
+  .smallbush #smallrosebush  {transform: translate3d(200px, 12px, -167px);scale: 1.3;}
+
+/* --------------birdbox------- */
+  .birdbox .face { scale: 70%;}
+  .birdbox {position: absolute; transform: translate3d(-48px,0px,87px);}
+  .birdbox .entrance  {transform: translate3d( 53px, -10px, -42px);}
+  .birdbox .rightfront  {transform: rotateY( 90deg ) rotatex(-37deg) translate3d( 91px, -39px, 170px );}
+
+  .birdbox .leftbottom {transform:rotateZ(-36deg) rotateX(90deg) translate3d( 41px, -89px, 18px);}
+  .birdbox .leftside { transform: rotateZ( -36deg )   translate3d( 0px, 46px, -33px);}
+  .birdbox .leftbox  {transform:rotateY( 90deg ) rotatex(18deg)  translate3d( 80px, 60px, 25.5px);}
+  .birdbox .leftfront {transform: rotateY( 90deg ) rotatex(34deg) translate3d( 91px, 48.5px, -56px );}
+  
+  .birdbox .rightbottom    { transform:rotateZ(36deg) rotateX(90deg) translate3d( 71.5px, -89px, 100px);}
+  .birdbox .rightside {transform:rotateZ( 36deg )   translate3d( 113px, -36px, -33px);}
+  .birdbox .rightbox { transform: rotateY( 90deg ) rotatex(-18deg)   translate3d( 79px, -2px, 166.5px);}
+  .birdbox .back {transform:   translate3d( 53px, -10px, -45px);}
+  .birdbox .frontpost  {transform:   translate3d(146px, 105px, -74px );}
+  .birdbox .leftpost {transform: rotateY( 90deg )   translate3d( 80px, 105px, 140px);}
+  .birdbox .rightpost    { transform:rotateY( 90deg )   translate3d( 80px, 105px, 152px);}
+  
+  .flowers{position: absolute;}
+  .flowers .flowers1  {transform: rotateX( 80deg )translate3d(  61px, 47px, -212px)scale(.3);}
+  .flowers .flowers2  {transform: rotateX( 85deg )rotatey(10deg) translate3d( 130px, -6px, -199px)scale(0.3);}
+  .flowers .flowers3  {transform: rotateX( 80deg )rotatey(-5deg) translate3d( -5px, 12px, -217px)scale(.3);}
+  .flowers .flowers4  {transform: rotateX( 85deg )rotatey(10deg) translate3d(598px, 129px, -98px)scale(0.3);}
+  .flowers .flowers5  {transform: rotateX( 80deg )rotatey(-5deg) translate3d( 502px, 162px, -234px)scale(.3);}
+
+  .flowers .stem1  { transform: translate3d(72px, 194px, 24px)scale(.2);}
+  .flowers .stem2  {transform: translate3d( 29px, 192px, -9px)scale(.2);}
+  .flowers .stem3  {transform: translate3d(  104px, 196px, -10px)scale(.2);}
+  .flowers .stem4  {transform:  translate3d(583px, 190px, 126px)scale(.2);}
+  .flowers .stem5  {transform: translate3d( 535px, 191px, 145px)scale(.2);}
+
+  .flower1:hover,.flower2:hover,.flower3:hover,.flower4:hover,.flower5:hover  {
+ 
+    animation: spin .5s 0s linear infinite;
+    transition-timing-function: ease-in-out;
+ }
+ @keyframes spin{
+  0% { transform: rotateZ( 0deg )}
+  100% { transform:rotateZ( 360deg )}
+ }
+
+.queen{
+  position: absolute;
+  transform: translate3d(481px, -11px, -13px);
+  height: 0%;
+  width: auto;
+}
+.queen #queen{
+  height: auto;
+  width: 69%; 
+ 
+}
+.king{
+  position: absolute;
+  transform: translate3d(315px,-14px, -63px);
+  height: 0%;
+  width: auto;
+
+}
+.king #king{
+  height: auto;
+  width: 70%; 
+}
+#king, .button, #queen, .birdbox, #rabbit{
+  cursor: pointer;
+}
+
+.alice{
+  position: absolute;
+  transform: translate3d(138px, 11px, -2px);
+  height: 0%;
+  width: auto;
+}
+.alice #alice{
+  height: auto;
+  width: 60%; 
+  overflow: hidden;
+}
+.rabbit{
+  transform: translate3d(410px,96px,77px);
+ height: 0%;
+ width: auto;
+ 
+}
+#rabbit{
+  height: auto;
+  width: 55%;
+  overflow: hidden;
+}
+.musicnote{
+  scale: 40%;
+  transform: rotatez(-17deg) translate3d(135px,120px,63px);
+  
+}
+.noteidle{
+  display: none;
+}
+.note{
+  opacity: 0;
+  animation: noteanm 2s 0s linear ;
+  position: absolute;
+  display: block;
+}
+@keyframes noteanm{
+  0% { transform: translateY( 0px ); scale:80%}
+  50% { transform:rotateZ(-13deg) translateX( 40px ); opacity:1; scale:100% ; }
+  75% { transform:rotateZ(-17deg) translateX( 60px ); opacity:1; scale:100% ; }
+  100% { transform:rotateZ(-20deg) translateX( 70px ) ;opacity:0; scale: 110%;}
+}
+
+.croquet{
+  transform: translate3d(68px,202px,123px);
+
+}
+.hog{
+  transition: transform 1s ease;
+  transform: translateZ(0px);
+}
+.button{
+  overflow: hidden;
+}
+
+.subtitle{
+  width: auto;
+  bottom: 5%;
+  position: absolute;
+  justify-content: center;
+}
+.subtitle .subpop{
+ font-family: 'Alice';
+ background-image: radial-gradient(rgb(199, 223, 231), rgb(187, 208, 228));
+ border-radius: 20px;
+ padding: 20px;
+ border-style: solid;
+ border-color: #703c3a;
+ font-weight: 400;
+ user-select: none;
+ white-space: nowrap;
+ visibility: hidden;
+ font-size: 28px;
+ color: #703c3a;
+ box-shadow: .5px 1px 3px #703c3a;
+ justify-content: center;
+}
+.subtitle .showspan{
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.hoop{
+  height: 25px;
+  width: auto;
+  transform: translate3d(115px,207px,70px);
+}
+
+#cheshire {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transform: translatey(67.5%);
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+}
+
+#cheshire:hover {
+  transform: translatey(-10%)
+}
